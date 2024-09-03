@@ -37,5 +37,13 @@ int luaopen_config_keymaps() {
   map("n", "<leader>fd", ":Telescope find_files <CR>");
   map("n", "<leader>fw", ":Telescope live_grep <CR>");
 
+  // Add custom escape keybindings
+  map("i", "jk", "<Esc>");  // Insert mode
+  map("v", "jk", "<Esc>");  // Visual mode
+  map("s", "jk", "<Esc>");  // Select mode
+  map("c", "jk", "<C-c>");  // Command-line mode (use <C-c> to cancel commands)
+  map("t", "jk", "<C-\\><C-n>");  // Terminal mode
+
   return 1;
 }
+
